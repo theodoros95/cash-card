@@ -6,9 +6,9 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 interface CashCardRepository extends CrudRepository<CashCard, Long>, PagingAndSortingRepository<CashCard, Long> {
-    CashCard findByIdAndOwner(Long id, String owner);
+    CashCard findByIdAndOwner(final Long id, final String owner);
 
-    Page<CashCard> findByOwner(String owner, PageRequest pageRequest);
+    Page<CashCard> findByOwner(final String owner, final PageRequest pageRequest);
 
-    boolean existsByIdAndOwner(Long id, String owner);
+    boolean existsByIdAndOwner(final Long id, final String owner);
 }
